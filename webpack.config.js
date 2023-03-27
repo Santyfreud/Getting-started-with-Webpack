@@ -1,20 +1,16 @@
-const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   entry: {
-    about: path.resolve(__dirname, './src/about.js'),
-    contact: path.resolve(__dirname, './src/contact.js'),
+    main: path.resolve(__dirname, './src/index.js'),
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: "[name].bundle.js",
+    filename: "main.js",
   },
 
-  optimization: {
-    splitChunks: {
-        chunks: "all"
-    }
-  },
+  plugins: [new HtmlWebpackPlugin()],
 
   devServer: {
     static: {
