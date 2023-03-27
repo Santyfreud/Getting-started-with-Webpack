@@ -1,0 +1,11 @@
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: salmon;
+}
+
+#image {
+    width: 200px;
+    height: 200px;
+    background-image: url('cover-image.jpg');
+    background-size: cover;
+}
